@@ -1,7 +1,5 @@
 The heroku deploying: http://evening-ravine-9727.herokuapp.com/
 
-9.3-9.10: Set up the new app repository. Deploy the app to heroku. Change the index page into my Name.
-
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
