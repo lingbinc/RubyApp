@@ -171,21 +171,19 @@
         font-style: italic;
       }
     </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
+    
   </head>
   <body>
 	  <h1>Lingbin Cai's page</h1>
+
+	  <form action="somepage.php" method="post">
+		  <a src="https://github.com/lingbinc">Click here to view my github!</a>
+		  <form id="submit-form">
+			  <input type="text" placeholder="Input Box">Input
+			  <button id="submit-button" onclick="submit()">Submit</button>
+			  <input type="radio" name="choice" value="1">1
+			  <input type="radio" name="choice" value="2">2
+          </form>
+
   </body>
 </html>
