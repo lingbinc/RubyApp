@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create new User</title>
+	</head>
+	<body>
+		<%= form_for(@user) do |f| %>
+			<div class="filed">
+				<p>name</p>
+				<%=f.text_filed :name%>
+			</div>
+			<div class="filed">
+				<p>ID</p>
+				<%=f.text_file :ID%>
+			</div>
+			<div class="filed">
+				<p>password</p>
+				<%=f.text_filed :password%>
+			</div>
+			<div class="actions">
+				<%=f.submit %>
+			</div>
+		<% end %>
+	</body>
+</html>
