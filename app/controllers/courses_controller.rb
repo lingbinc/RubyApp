@@ -1,7 +1,18 @@
 class CoursesController < ApplicationController
-  def new_class
+  def new
+  	@course = Course.new
   end
 
-  def index_class
+  def create
+  	@course = Course.new(params[:course])
+  	if @course.save
+  		redirect_to courses_path
+  	else
+  		render 'new'
+  	end
+  end
+
+  def index
+  	@courses=Course.all
   end
 end

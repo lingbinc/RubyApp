@@ -1,8 +1,9 @@
 RubyApp::Application.routes.draw do
 
-  
-  resources :users
   resources :courses
+  resources :users
+  
+
   get "landing_pages/home"
 
   root :to =>'landing_pages#home'
