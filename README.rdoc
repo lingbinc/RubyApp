@@ -1,3 +1,9 @@
+========= Homework Four =======
+
+The heroku deploying with new appname: http://lingbinc196.herokuapp.com/
+
+9.24-10.1: Create two tables, Users and Courses, and the corresponding add items.
+
 ========= Homework Two ========
 
 The heroku deploying is up-to-date: http://evening-ravine-9727.herokuapp.com/
