@@ -7,6 +7,9 @@
 	<tr>
 		<td><%= course.name %></td>
 		<td><%= course.difficulty %></td>
+		<td><%= link_to "show course", course_path(course.id) %></td>
+		<td><%= link_to "edit course", edit_course_path(course.id) %></td>
+		<td><%= link_to "destroy course", course, confirm:"Do you really want to delete?", method: :delete %></td>
 	</tr>
 	<% end %>
 </table>

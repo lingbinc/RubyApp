@@ -1,5 +1,6 @@
 RubyApp::Application.routes.draw do
 
+  resources :tasklists
   resources :courses
   resources :users
   

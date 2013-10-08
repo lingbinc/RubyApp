@@ -1,9 +1,16 @@
 RubyApp::Application.routes.draw do
-  get "courses/new_class"
 
-  get "courses/index_class"
+  get "tasklists/index"
 
+  get "tasklists/new"
+
+  get "tasklists/edit"
+
+  get "tasklists/show"
+
+  resources :courses
   resources :users
+  
 
   get "landing_pages/home"
 

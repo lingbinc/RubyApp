@@ -1,17 +1,18 @@
 <%= form_for(@user) do |f| %>
 	<div class="field">
 		<p>name</p>
-		<%=f.text_field :name%>
+		<%= f.text_field :name%>
 	</div>
 	<div class="field">
 		<p>id</p>
-		<%=f.text_field :id%>
+		<%= f.text_field :id%>
 	</div>
 	<div class="field">
 		<p>password</p>
-		<%=f.text_field :password%>
+		<%= f.text_field :password%>
 	</div>
+
 	<div class="actions">
-		<%=f.submit %>
+		<%= f.submit %>
 	</div>
-<% end %>
+<%end%>

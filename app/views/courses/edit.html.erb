@@ -1,0 +1,14 @@
+<h1>Edit Courses</h1>
+<%= form_for(@course) do |f| %>
+	<div class="field">
+		<p>name</p>
+		<%= f.text_field :name%>
+	</div>
+	<div class="field">
+		<p>difficulty</p>
+		<%= f.text_field :difficulty%>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
