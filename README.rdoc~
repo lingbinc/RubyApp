@@ -1,3 +1,13 @@
+========= Homework Five =======
+
+10.1-10.8: Add show, edit, delete functions to User, Course and Tasklist; create tasklist with attributes title, course and user, with course and user related to the other two tables.
+
+========= Homework Four =======
+
+The heroku deploying with new appname: http://lingbinc196.herokuapp.com/
+
+9.24-10.1: Create two tables, Users and Courses, and the corresponding add items.
+
 ========= Homework Two ========
 
 The heroku deploying is up-to-date: http://evening-ravine-9727.herokuapp.com/
