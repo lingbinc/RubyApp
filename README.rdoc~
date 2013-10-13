@@ -1,5 +1,7 @@
 ========= Homework Five =======
 
+The heroku deploying with new appname: http://lingbinc196.herokuapp.com/
+
 10.1-10.8: Add show, edit, delete functions to User, Course and Tasklist; create tasklist with attributes title, course and user, with course and user related to the other two tables.
 
 ========= Homework Four =======
