@@ -1,17 +1,33 @@
+<h1 class='page_name'>Add User</h1>
+<div class='add_form'>
 <%= form_for(@user) do |f| %>
 	<div class="field">
-		<p>name</p>
+		<h3>name</h3>
 		<%=f.text_field :name%>
+		<% if (@user.errors.include?(:name)) %>
+			<li class='error-msg'><%= @user.errors[:name]%></li>
+		<%end%>
 	</div>
 	<div class="field">
-		<p>email</p>
+		<h3>email</h3>
 		<%=f.text_field :email%>
+		<% if (@user.errors.include?(:email)) %>
+			<li class='error-msg'><%= @user.errors[:email] %></li>
+		<%end%>	
 	</div>
 	<div class="field">
-		<p>password</p>
+		<h3>password</h3>
 		<%=f.text_field :password%>
+		<% if (@user.errors.include?(:password)) %>
+			<li class='error-msg'><%= @user.errors[:password] %></li>
+		<%end%>
+	</div>
+	<div class="field">
+		<h3>password again</h3>
+		<%=f.text_field :password_confirmation%>
 	</div>
 	<div class="actions">
-		<%=f.submit %>
+		<%=f.submit 'Create User', :class => 'submit_button' %>
 	</div>
 <% end %>
+</div>

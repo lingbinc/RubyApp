@@ -11,3 +11,83 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	background-color: #f0f0f0;
+	height: inherit;
+	width: inherit;
+	font-family: "Times New Roman";
+}
+
+h1,h2,h3,p,li,ul,table,td {
+	font-family: inherit;
+}
+
+h1 {
+	size: 30pt;
+}
+
+h2 {
+	size: 25pt;
+}
+
+td {
+	text-align: center;
+	width: 200px;
+	border: 1px dashed #ccc;
+}
+
+p {
+	font-size: 12pt;
+}
+
+h3 {
+	size: 20pt;
+}
+
+select {
+   width: 150px;
+   height: 34px;
+   overflow: hidden;
+   border: 1px solid #ccc;
+}
+
+table {
+	margin-left: 10px;
+}
+
+.page_name {
+	font-style: italic;
+	padding-left: 10px;
+}
+
+.submit_button {
+
+	margin: 5px;
+	padding: 5px;
+	font-size: 15pt;
+	border: 1px dashed #ccc;
+}
+
+.table_header {
+	font-size: 15pt;
+	font-style: italic;
+}
+
+.table_action {
+	padding-left: 10px;
+}
+
+.add_form {
+	padding-left: 10px;
+}
+
+.error-msg {
+	color: red;
+}
+
+#homepage_list {
+	padding-left: 10px;
+}
+
+

@@ -1,19 +1,24 @@
-<h1>Add Task</h1>
+<h1 class='page_name'>Add Task</h1>
+<div class='add_form'>
 <%= form_for(@task_list) do |f| %>
 	<div class="field">
-		<p>title</p>
+		<h3>title</h3>
 		<%=f.text_field :title%>
+		<% if (@task_list.errors.include?(:title)) %>
+			<li class='error-msg'><%= @task_list.errors[:title]%></li>
+		<%end%>
 	</div>
 	<div class="field">
-		<p>course</p>
+		<h3>course</h3>
 		<%=f.collection_select :course_id, Course.all, :id, :name %>
 	</div>
 	<div class="field">
-		<p>user</p>
+		<h3>user</h3>
 		<%= f.collection_select :user_id, User.all, :id, :name %>
 	</div>
 
 	<div class="actions">
-		<%= f.submit %>
+		<%= f.submit 'Create Task', :class => 'submit_button' %>
 	</div>
 <%end%>
+</div>

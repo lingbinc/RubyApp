@@ -1,14 +1,19 @@
-<h1>Add Courses</h1>
+<h1 class='page_name'>Add Courses</h1>
+<div class='add_form'>
 <%= form_for(@course) do |f| %>
 	<div class="field">
-		<p>name</p>
+		<h3>name</h3>
 		<%= f.text_field :name%>
+		<% if (@course.errors.include?(:name)) %>
+			<li class='error-msg'><%= @course.errors[:name]%></li>
+		<%end%>
 	</div>
 	<div class="field">
-		<p>difficulty</p>
+		<h3>difficulty</h3>
 		<%= f.text_field :difficulty%>
 	</div>
 	<div class="actions">
-		<%= f.submit %>
+		<%= f.submit 'Create Course', :class => 'submit_button' %>
 	</div>
 <% end %>
+</div>

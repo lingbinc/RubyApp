@@ -1,15 +1,18 @@
+<h1 class='page_name'>Courses</h1>
 <table>
 	<tr>
-		<td>name</td>
-		<td>difficulty</td>
+		<td class='table_header'>name</td>
+		<td class='table_header'>difficulty</td>
 	</tr>
 	<% @courses.each do |course| %>
 	<tr>
 		<td><%= course.name %></td>
 		<td><%= course.difficulty %></td>
-		<td><%= link_to "show course", course_path(course.id) %></td>
-		<td><%= link_to "edit course", edit_course_path(course.id) %></td>
-		<td><%= link_to "destroy course", course, confirm:"Do you really want to delete?", method: :delete %></td>
+		<td>
+			<%= link_to "show", course_path(course.id), :class => 'table_action' %>
+			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
+			<%= link_to "delete", course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
+		</td>
 	</tr>
 	<% end %>
 </table>

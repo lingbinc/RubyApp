@@ -5,14 +5,16 @@
 	</head>
 	<body>
 		<h1>Lingbin Cai Courses</h1>
-		<p> User Table </p>
-		<%= link_to "Users", users_path %>
-		<%= link_to "Add User", new_user_path %><br>
-		<p> Course Table </p>
-		<%= link_to "Courses", courses_path %>
-		<%= link_to "Add Course", new_course_path %>
-		<p> Task Table </p>
-		<%= link_to "Tasks", tasklists_path %>
-		<%= link_to "Add Task", new_tasklist_path %>
+		<div id='homepage_list'>
+			<h3> User Table </h3>
+			<%= link_to "Users", users_path %>
+			<%= link_to "Add User", new_user_path %><br>
+			<h3> Course Table </h3>
+			<%= link_to "Courses", courses_path %>
+			<%= link_to "Add Course", new_course_path %>
+			<h3> Task Table </h3>
+			<%= link_to "Tasks", tasklists_path %>
+			<%= link_to "Add Task", new_tasklist_path %>
+		</div>
 	</body>
 </html>
