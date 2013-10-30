@@ -1,9 +1,10 @@
 RubyApp::Application.routes.draw do
 
+  devise_for :users
+
   resources :tasklists
   resources :courses
-  resources :users
-  
+
 
   get "landing_pages/home"
 

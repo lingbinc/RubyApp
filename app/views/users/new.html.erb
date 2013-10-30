@@ -17,7 +17,7 @@
 	</div>
 	<div class="field">
 		<h3>password</h3>
-		<%=f.text_field :password%>
+		<%=f.password_field :password%>
 		<% if (@user.errors.include?(:password)) %>
 			<li class='error-msg'><%= @user.errors[:password] %></li>
 		<%end%>

@@ -13,8 +13,7 @@
 		<%=f.collection_select :course_id, Course.all, :id, :name %>
 	</div>
 	<div class="field">
-		<h3>user</h3>
-		<%= f.collection_select :user_id, User.all, :id, :name %>
+		<%= f.hidden_field :user_id, :value=>current_user.id%>
 	</div>
 
 	<div class="actions">
