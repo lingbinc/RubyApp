@@ -1,6 +1,12 @@
+========= Homework Seven ======
+
+heroku: http://lingbinc196.herokuapp.com/
+
+10.16-10:30: Add gem devise to the app, modify the adding user function for tasklist
+
 ========= Homework Six ========
 
-heroku: http://lingbinc196.herokuapp.com/users
+heroku: http://lingbinc196.herokuapp.com/
 
 10.8-10.15: Add validation for both three tables with each error message shown under each text input.
 
