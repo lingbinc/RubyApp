@@ -14,6 +14,9 @@ class CoursesController < ApplicationController
 
   def index
   	@courses=Course.all
+    @courses_easy = Course.easy_course
+    @courses_medium = Course.medium_course
+    @courses_hard = Course.hard_course
   end
 
   def show

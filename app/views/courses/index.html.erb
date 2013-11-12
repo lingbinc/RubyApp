@@ -4,7 +4,32 @@
 		<td class='table_header'>name</td>
 		<td class='table_header'>difficulty</td>
 	</tr>
-	<% @courses.each do |course| %>
+
+	<% @courses_easy.each do |course| %>
+	<tr>
+		<td><%= course.name %></td>
+		<td><%= course.difficulty %></td>
+		<td>
+			<%= link_to "show", course_path(course.id), :class => 'table_action' %>
+			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
+			<%= link_to "delete", course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
+		</td>
+	</tr>
+	<% end %>
+
+	<% @courses_medium.each do |course| %>
+	<tr>
+		<td><%= course.name %></td>
+		<td><%= course.difficulty %></td>
+		<td>
+			<%= link_to "show", course_path(course.id), :class => 'table_action' %>
+			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
+			<%= link_to "delete", course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
+		</td>
+	</tr>
+	<% end %>
+
+	<% @courses_hard.each do |course| %>
 	<tr>
 		<td><%= course.name %></td>
 		<td><%= course.difficulty %></td>

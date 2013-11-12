@@ -10,7 +10,7 @@
 	</div>
 	<div class="field">
 		<h3>difficulty</h3>
-		<%= f.text_field :difficulty%>
+		<%= f.select( :difficulty, Course::DIFFICULTY_LEVEL) %>
 	</div>
 	<div class="actions">
 		<%= f.submit 'Edit Course',:class => 'submit_button'%>
