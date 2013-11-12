@@ -1,3 +1,10 @@
+========= Homework Eight ======
+
+heroku: http://lingbinc196.herokuapp.com/
+
+10.31-11.05: Add Sendgrid heroku addon to the app, works nicely.
+             Met javascript problem after running "rake assets:precompile" last time, the dropdown menu did not work. Change the line in config/environments/development.rb config.assets.debug=false to true. Then the javascript works fine. 
+
 ========= Homework Seven ======
 
 heroku: http://lingbinc196.herokuapp.com/
