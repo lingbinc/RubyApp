@@ -1,3 +1,13 @@
+========= Homework Ten ========
+
+heroku: http://lingbinc196.herokuapp.com/
+
+11.13-11.19: Add jquery toggle funtion to Tasklists, which originally shows the top three tasks and after clicking the show button it will show the rest of tasks.
+
+Met a javascript problem and solved by resetting the assets.
+
+Testing account: tester@seas.upenn.edu, passwork: 12345678
+
 ========= Homework Nine =======
 
 heroku: http://lingbinc196.herokuapp.com/
