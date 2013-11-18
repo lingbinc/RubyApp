@@ -1,11 +1,12 @@
 <h1 class="page_name">Tasklists</h1>
+<button id="show_button">show</button>
 <table>
 	<tr>
 		<td class="table_header">title</td>
 		<td class="table_header">course</td>
 		<td class="table_header">user</td>
 	</tr>
-	<% @task_lists.each do |task_list| %>
+	<% @task_lists.limit(3).each do |task_list| %>
 	<tr>
 		<td><%= task_list.title %></td>
 		<td><%= task_list.course.name %></td>
@@ -17,4 +18,17 @@
 	    </td>
 	</tr>
 	<%end%>
+	<% @task_lists.offset(3).each do |task_list| %>
+	<tr class="more_table" style="display:none">
+		<td><%= task_list.title %></td>
+		<td><%= task_list.course.name %></td>
+		<td><%= task_list.user.name %></td>
+		<td>
+		<a><%= link_to "show", tasklist_path(task_list.id), :class => 'table_action'%></a>
+		<a><%= link_to "edit", edit_tasklist_path(task_list.id), :class => 'table_action'%></a>
+		<a><%= link_to "delete", task_list, confirm:"Do you really want to delete?", method: :delete, :class=> 'table_action'%></a>
+	    </td>
+	</tr>
+	<%end%>
+	
 </table>

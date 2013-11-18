@@ -61,12 +61,16 @@ table {
 	padding-left: 10px;
 }
 
-.submit_button {
+#show_button,.submit_button {
 
 	margin: 5px;
 	padding: 5px;
 	font-size: 15pt;
 	border: 1px dashed #ccc;
+}
+
+#show_button {
+	margin-left:20px;
 }
 
 .table_header {
