@@ -4,14 +4,15 @@
 		<title>Homepage</title>
 	</head>
 	<body>
-		<h1>Courses</h1>
-		<div id='homepage_list'>
-			<h3> Course Table </h3>
-			<%= link_to "Courses", courses_path %>
-			<%= link_to "Add Course", new_course_path %>
-			<h3> Task Table </h3>
-			<%= link_to "Tasks", tasklists_path %>
-			<%= link_to "Add Task", new_tasklist_path %>
+		<div class="wrapper">
+			<h1 class="page_name">Welcome! <%= current_user.name %></h1>
+			<div id='homepage_list'>
+				<h3> What to do? </h3>
+				<%= link_to "View Courses", courses_path, :class => "home-link" %>
+				<%= link_to "Add Course", new_course_path, :class => "home-link"%></br>
+				<%= link_to "View Tasks", tasklists_path, :class => "home-link"%>
+				<%= link_to "Add Task", new_tasklist_path, :class => "home-link"%>
+			</div>
 		</div>
 	</body>
 </html>
