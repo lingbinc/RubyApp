@@ -1,34 +1,34 @@
+<div class="table-division">
 <h1 class="page_name">Tasklists</h1>
-<button id="show_button">show</button>
 <table>
 	<tr>
-		<td class="table_header">title</td>
-		<td class="table_header">course</td>
-		<td class="table_header">user</td>
+		<td class="table_header" id="title_header">
+			<input type="button" id="button-cta" class="show-button" value="-">		Title</td>
+		<td class="table_header">Course</td>
+		<td class="table_header">Priority</td>
+		<td class="table_header"></td>
 	</tr>
-	<% @task_lists.limit(3).each do |task_list| %>
-	<tr>
-		<td><%= task_list.title %></td>
-		<td><%= task_list.course.name %></td>
-		<td><%= task_list.user.name %></td>
-		<td>
-		<a><%= link_to "show", tasklist_path(task_list.id), :class => 'table_action'%></a>
-		<a><%= link_to "edit", edit_tasklist_path(task_list.id), :class => 'table_action'%></a>
-		<a><%= link_to "delete", task_list, confirm:"Do you really want to delete?", method: :delete, :class=> 'table_action'%></a>
+	<% @task_lists.order("priority DESC").limit(5).each do |task_list| %>
+	<tr class="table_entry">
+		<td class="tab-big"><%= link_to task_list.title, tasklist_path(task_list.id), :class => 'table_action'%></td>
+		<td class="tab-small"><%= link_to task_list.course.name, course_path(task_list.course.id), :class =>'table_action' %></td>
+		<td class="tab-small"><%= image_tag('star'+task_list.priority.to_s+'.gif') %></td>
+		<td class="tab-small">
+		<a><%= link_to image_tag('circle.png', :class =>'complete-btn'), task_list, confirm:"You have done? Congrats!", method: :delete, :class=> 'table_action'%></a>
 	    </td>
 	</tr>
+	
 	<%end%>
-	<% @task_lists.offset(3).each do |task_list| %>
-	<tr class="more_table" style="display:none">
-		<td><%= task_list.title %></td>
-		<td><%= task_list.course.name %></td>
-		<td><%= task_list.user.name %></td>
-		<td>
-		<a><%= link_to "show", tasklist_path(task_list.id), :class => 'table_action'%></a>
-		<a><%= link_to "edit", edit_tasklist_path(task_list.id), :class => 'table_action'%></a>
-		<a><%= link_to "delete", task_list, confirm:"Do you really want to delete?", method: :delete, :class=> 'table_action'%></a>
+	<% @task_lists.order("priority DESC").offset(5).each do |task_list| %>
+	<tr class="more_table" style="display:visible">
+		<td class="tab-big"><%= link_to task_list.title, tasklist_path(task_list.id), :class => 'table_action'%></td>
+		<td class="tab-small"><%= link_to task_list.course.name, course_path(task_list.course.id), :class =>'table_action' %></td>
+		<td class="tab-small"><%= image_tag('star'+task_list.priority.to_s+'.gif', :title =>task_list.priority.to_s) %></td>
+		<td class="tab-small">
+		<a><%= link_to image_tag('circle.png', :class =>'complete-btn'), task_list, confirm:"You have done? Congrats!", method: :delete, :class=> 'table_action'%></a>
 	    </td>
 	</tr>
 	<%end%>
 	
 </table>
+</div>

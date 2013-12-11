@@ -17,10 +17,12 @@ body {
 	height: inherit;
 	width: inherit;
 	font-family: "Times New Roman";
+	background-image: url("/assets/paper_background.jpg");
 }
 
 h1,h2,h3,p,li,ul,table,td {
 	font-family: inherit;
+	font-size: 16pt;
 }
 
 h1 {
@@ -33,8 +35,29 @@ h2 {
 
 td {
 	text-align: center;
-	width: 200px;
-	border: 1px dashed #ccc;
+	border-top: 2px dashed #ccc;
+}
+
+a:link {
+	color:#909090;
+}
+
+a:hover {
+	color:#3030a0;
+}
+
+a:visited {
+	color:#909090;
+}
+
+.tab-big {
+	width: 300px;
+	font-family: fantasy;
+}
+
+.tab-small {
+	width: 100px;
+	font-family: fantasy;
 }
 
 p {
@@ -53,37 +76,62 @@ select {
 }
 
 table {
-	margin-left: 10px;
+	margin:auto;
+	margin-bottom: 40px;
+}
+
+.navbar-header {
+	font-family: fantasy;
+}
+
+.nav navbar-nav {
+	margin-left: 4%
+}
+
+#nav-sign {
+	float:right;
+}
+
+#title_header {
+	text-align: left;
+}
+
+.show-button {
+	margin-right: 32%;
+	vertical-align: bottom;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+.table-division {
+	margin-left: 10%;
+	margin-right:10%;
+	height:100%;
+	background-color: rgba(100%,100%,100%,0.6);
 }
 
 .page_name {
-	font-style: italic;
-	padding-left: 10px;
-}
-
-#show_button,.submit_button {
-
-	margin: 5px;
-	padding: 5px;
-	font-size: 15pt;
-	border: 1px dashed #ccc;
-}
-
-#show_button {
-	margin-left:20px;
+	font-family: cursive;
+	color: #808080;
+	padding-top: 2%;
+	text-align: center;
+	font-size: 36pt;
 }
 
 .table_header {
-	font-size: 15pt;
-	font-style: italic;
+	font-size: 16pt;
+	font-style: normal;
 }
 
 .table_action {
-	padding-left: 10px;
+	padding: 10px;
 }
 
 .add_form {
-	padding-left: 10px;
+	margin: auto;
+	width: 50%;
+	text-align: center;
 }
 
 .error-msg {
@@ -94,4 +142,34 @@ table {
 	padding-left: 10px;
 }
 
+.button-cta,
+.button-large-cta {
+  border: 1px solid #143250;
+  background-color: #288edf;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36);
+  box-shadow: inset 0 1px rgba(255,255,255,0.36);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 -1px rgba(0,0,0,0.36);
+}
+
+.button-large-cta {
+	font-size: 20pt;
+	margin: 3%;
+}
+
+.button-cta:active,
+.button-cta.is-active,
+.button-large-cta:active,
+.button-large-cta.is-active {
+  background-color: #1976c3;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+}
+.button-cta:disabled,
+.button-cta.is-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 

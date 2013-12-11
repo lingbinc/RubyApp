@@ -17,7 +17,9 @@ class TasklistsController < ApplicationController
       redirect_to root_path
     else
     	if @task_list.save
-        Notifications.new_tasklist(@task_list).deliver
+        if @task_list.priority==5
+          Notifications.new_tasklist(@task_list).deliver
+        end
     		redirect_to tasklists_path
     	else
     		render 'new'
