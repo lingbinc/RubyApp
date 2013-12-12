@@ -1,4 +1,4 @@
-README
+LovePriority ReadMe
 
 Description: This app is to well organize the assignments for all your school courses based on priority.
 
