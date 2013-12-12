@@ -3,7 +3,7 @@
 	<%= form_for(@course) do |f| %>
 		<div class="field">
 			<h3>Title</h3>
-			<%= f.text_field :name, :class => "text-line"%>
+			<%= f.text_field :name, :class => "text-line-upper"%>
 			<% if (@course.errors.include?(:name)) %>
 				<li class='error-msg'><%= @course.errors[:name]%></li>
 			<%end%>
