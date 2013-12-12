@@ -1,4 +1,6 @@
-<div>
-	<h2><%= @course.name %></h2>
-	<p><%= @course.difficulty %></p>
+<div class="wrapper">
+	<h3><%= @course.name %></h3>
+	<p>Difficulty: <%= @course.difficulty %></p>
+	<p class="show-description"><%= @course.description %></p>
+	<a><%= link_to "EDIT", edit_course_path(@course.id) %></a>
 </div>

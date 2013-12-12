@@ -1,5 +1,7 @@
-<div>
-	<h2><%= @task_list.title %></h2>
+<div class="wrapper">
+	<h3><%= @task_list.title %></h3>
 	<p><%= @task_list.course.name %></p>
-	<p><%= @task_list.user.name %></p>
+	<p>priority: <%= @task_list.priority %></p>
+	<p class="show-description"><%= @task_list.description %></p>
+	<a><%= link_to "EDIT", edit_tasklist_path(@task_list.id) %></a>
 </div>

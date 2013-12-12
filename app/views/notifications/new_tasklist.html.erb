@@ -1,1 +1,2 @@
-<%= @greeting %> You just created a new task! Check it and tackle it! Good luck! <%= tasklist_url(@id)%> 
+<%= @greeting %> You just set a highly important task: "<%= Tasklist.find(@id).title %>". You can check it out in the following link. Remeber to finish it. Good luck! 
+<%= tasklist_url(@id)%> 

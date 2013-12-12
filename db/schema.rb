@@ -11,22 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131211021712) do
+ActiveRecord::Schema.define(:version => 20131212015739) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
     t.string   "difficulty"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "description"
   end
 
   create_table "tasklists", :force => true do |t|
     t.string   "title"
     t.integer  "course_id"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "priority"
+    t.string   "description"
   end
 
   add_index "tasklists", ["course_id"], :name => "index_tasklists_on_course_id"

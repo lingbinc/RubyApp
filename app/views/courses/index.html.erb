@@ -2,8 +2,9 @@
 <h1 class='page_name'>Courses</h1>
 <table>
 	<tr>
-		<td class='table_header'>Name</td>
-		<td class='table_header'>Difficulty</td>
+		<td class='table_header_big'>Name</td>
+		<td class='table_header_small'>Difficulty</td>
+		<td class='table_header_small'></td>
 	</tr>
 
 	<% @courses_hard.each do |course| %>
@@ -11,7 +12,6 @@
 		<td class="tab-small"><%= link_to course.name, course_path(course.id), :class => 'table_action' %></td>
 		<td class="tab-small"><%= image_tag("hard.gif") %></td>
 		<td>
-			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
 			<%= link_to image_tag("delete.gif"), course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
 		</td>
 	</tr>
@@ -22,7 +22,6 @@
 		<td class="tab-small"><%= link_to course.name, course_path(course.id), :class => 'table_action' %></td>
 		<td class="tab-small"><%= image_tag("medium.gif") %></td>
 		<td>
-			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
 			<%= link_to image_tag("delete.gif"), course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
 		</td>
 	</tr>
@@ -33,7 +32,6 @@
 		<td class="tab-small"><%= link_to course.name, course_path(course.id), :class => 'table_action' %></td>
 		<td class="tab-small"><%= image_tag("easy.gif") %></td>
 		<td>
-			<%= link_to "edit", edit_course_path(course.id), :class => 'table_action' %>
 			<%= link_to image_tag("delete.gif"), course, confirm:"Do you really want to delete?", method: :delete, :class => 'table_action' %>
 		</td>
 	</tr>

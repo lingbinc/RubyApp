@@ -1,32 +1,40 @@
 <div class="wrapper">
 <h1 class="page_name">Tasklists</h1>
+<h3><%= (@task_lists.size()==0)? "You have done all the tasks! Great!" : "" %></h3>
 <table>
 	<tr>
-		<td class="table_header" id="title_header">
-			<input type="button" id="button-cta" class="show-button" value="-">		Title</td>
-		<td class="table_header">Course</td>
-		<td class="table_header">Priority</td>
-		<td class="table_header"></td>
+		<td class="table_header_big">
+			<input type="button" id="button-cta" class="show-button" value="-" style='display: <%= (@task_lists.size()>5)? "visible" : "none"%>'>Title
+		</td>
+		<td class="table_header_small">Course</td>
+		<td class="table_header_small">Priority</td>
+		<td class="table_header_small"></td>
 	</tr>
 	<% @task_lists.order("priority DESC").limit(5).each do |task_list| %>
-	<tr class="table_entry">
-		<td class="tab-big"><%= link_to task_list.title, tasklist_path(task_list.id), :class => 'table_action'%></td>
+	<tr class="clickablerow" id="<%=task_list.id%>">
+		<td class="tab-big "><%= link_to task_list.title, edit_tasklist_path(task_list.id), :class =>'table-action'%></td>
 		<td class="tab-small"><%= link_to task_list.course.name, course_path(task_list.course.id), :class =>'table_action' %></td>
 		<td class="tab-small"><%= image_tag('star'+task_list.priority.to_s+'.gif') %></td>
 		<td class="tab-small">
-		<a><%= link_to image_tag('circle.png', :class =>'complete-btn'), task_list, confirm:"You have done? Congrats!", method: :delete, :class=> 'table_action'%></a>
+			<a><%= link_to image_tag('circle.png', :class =>'complete-btn'), task_list, confirm:"You have done? Congrats!", method: :delete, :class=> 'table_action'%>
+			</a>
 	    </td>
 	</tr>
-	
+	<tr class="description-row" id="task_description_<%=task_list.id%>" style="display:none">
+		<td class="task-description"><%= task_list.description %></td>
+	</tr>
 	<%end%>
 	<% @task_lists.order("priority DESC").offset(5).each do |task_list| %>
-	<tr class="more_table" style="display:visible">
+	<tr class="clickablerow_more" style="display:visible" id="<%=task_list.id%>">
 		<td class="tab-big"><%= link_to task_list.title, tasklist_path(task_list.id), :class => 'table_action'%></td>
 		<td class="tab-small"><%= link_to task_list.course.name, course_path(task_list.course.id), :class =>'table_action' %></td>
 		<td class="tab-small"><%= image_tag('star'+task_list.priority.to_s+'.gif', :title =>task_list.priority.to_s) %></td>
 		<td class="tab-small">
 		<a><%= link_to image_tag('circle.png', :class =>'complete-btn'), task_list, confirm:"You have done? Congrats!", method: :delete, :class=> 'table_action'%></a>
 	    </td>
+	</tr>
+	<tr class="description-row_more" id="task_description_<%=task_list.id%>" style="display:none">
+		<td class="task-description"><%= task_list.description %></td>
 	</tr>
 	<%end%>
 	

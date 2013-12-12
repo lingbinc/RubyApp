@@ -3,6 +3,8 @@ circle.png: circle-c4da6a7c7635503d2068822c1e57e647.png
 circle/index.png: circle-c4da6a7c7635503d2068822c1e57e647.png
 circle2.png: circle2-4226c656aafeaa4fe09ed9bef9d3e94e.png
 circle2/index.png: circle2-4226c656aafeaa4fe09ed9bef9d3e94e.png
+delete.gif: delete-48157f1d041fcc0fbccdf3cb472d8988.gif
+delete/index.gif: delete-48157f1d041fcc0fbccdf3cb472d8988.gif
 delete.png: delete-e43ee0fb807b0dafa1505cc3a7238dae.png
 delete/index.png: delete-e43ee0fb807b0dafa1505cc3a7238dae.png
 easy.gif: easy-5ce54c54233dc7bfc50edcb55cf36d55.gif
@@ -35,9 +37,9 @@ tick.png: tick-683336609948fdd47a2f7d5798bc12f2.png
 tick/index.png: tick-683336609948fdd47a2f7d5798bc12f2.png
 tick2.png: tick2-93c29a70aa0adac3b6960a0c594b55dc.png
 tick2/index.png: tick2-93c29a70aa0adac3b6960a0c594b55dc.png
-application.js: application-66b26249971e296038186f980ed2177b.js
-application/index.js: application-66b26249971e296038186f980ed2177b.js
-application.css: application-397f40e239c53bfe149e05a2fd80cb24.css
-application/index.css: application-397f40e239c53bfe149e05a2fd80cb24.css
+application.js: application-53c15eca932bd7ee87a6acf81f9b9689.js
+application/index.js: application-53c15eca932bd7ee87a6acf81f9b9689.js
+application.css: application-476da6af63aae48732f5640d31e2cd28.css
+application/index.css: application-476da6af63aae48732f5640d31e2cd28.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map

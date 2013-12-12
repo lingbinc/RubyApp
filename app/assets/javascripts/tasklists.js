@@ -1,6 +1,7 @@
 $(function(){
 	$(".show-button").click(function(){
-		$(".more_table").toggle("slow", function(){});
+		$(".clickablerow_more").toggle("slow");
+		$(".description-row_more").attr("style","display:none");
 		$(this).attr("value",($(this).val()=="+")?"-":"+");
 	});
 	
@@ -11,5 +12,14 @@ $(function(){
 		.mouseout(function() {
 			$(this).attr("src","/assets/circle.png");
 		});
+	$(".clickablerow").click(function(){
+		$("#task_description_"+$(this).attr("id")).toggle("slow");
+	});
+
+	$(".clickablerow_more").click(function(){
+		$("#task_description_"+$(this).attr("id")).toggle("slow");
+	});
+
+
 });
 

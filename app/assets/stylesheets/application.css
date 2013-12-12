@@ -20,7 +20,7 @@ body {
 	background-image: url("/assets/paper_background.jpg");
 }
 
-h1,h2,h3,p,li,ul,table,td {
+p,li,ul,table,td {
 	font-family: inherit;
 	font-size: 16pt;
 }
@@ -37,6 +37,15 @@ h2 {
 td {
 	text-align: center;
 	border-top: 2px dashed #ccc;
+}
+
+td.task-description {
+	font-size: 12pt;
+	font-family: normal;
+	text-align: left;
+	padding: 2px;
+	border: none;
+	width:300px;
 }
 
 a:link {
@@ -61,12 +70,18 @@ a:visited {
 	font-family: fantasy;
 }
 
+.clickablerow:hover, .clickablerow_more:hover{
+	background-color: rgba(100%,100%,100%,0.8);
+	cursor: pointer;
+}
+
 p {
 	font-size: 12pt;
 }
 
 h3 {
 	size: 20pt;
+	font-family: fantasy;
 }
 
 select {
@@ -83,6 +98,7 @@ table {
 
 .navbar-header {
 	font-family: fantasy;
+	font-size: 20pt;
 }
 
 .nav navbar-nav {
@@ -98,7 +114,6 @@ table {
 }
 
 .show-button {
-	margin-right: 32%;
 	vertical-align: bottom;
 	width: 30px;
 	height: 30px;
@@ -121,13 +136,23 @@ table {
 	font-size: 36pt;
 }
 
-.table_header {
+.table_header_big {
+	text-align: center;
+	width: 300px;
 	font-size: 16pt;
 	font-style: normal;
+	border: none;
+}
+
+.table_header_small {
+	width: 100px;
+	font-size: 16pt;
+	font-style: normal;	
+	border: none;
 }
 
 .table_action {
-	padding: 10px;
+	padding: 5px;
 }
 
 .error-msg {
@@ -138,10 +163,33 @@ table {
 	font-family: fantasy;
 }
 
+.text-line {
+	width: 30%;
+	font-size:12pt;
+}
+
+.text-line-upper {
+	width: 30%;
+	font-size:12pt;
+	text-transform: uppercase;
+}
+
+.text-box {
+	width: 30%;
+	height: 200px;
+	font-size: 12pt;
+}
+
 .home-link {
 	font-size: 18pt;
 	padding-right: 3%;
 	padding-left: 3%;
+}
+
+.show-description {
+	width: 40%;
+	margin-left: 30%;
+	background-color: rgba(100%,100%,100%,0.8);
 }
 
 .button-cta,
